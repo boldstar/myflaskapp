@@ -1,0 +1,18 @@
+{% extends 'default.html' %}
+
+{%  block body %}
+    {% include 'includes/_sidebar.html' %}
+    {% include 'includes/_toolbar.html' %}
+    <div class="app-container">
+        <div class="files">
+            {% for file in files %}
+                <div class="file">
+                    <embed src="/uploads/{{file}}" class="file-preview">
+                    <h4 class="file-name">
+                        <a href="/uploads/{{file}}">{{file}}</a>
+                    </h4>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

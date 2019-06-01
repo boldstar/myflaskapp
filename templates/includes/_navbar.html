@@ -1,0 +1,21 @@
+<header>
+    <div class="nav-left">
+        <a href="#" class="logo">FlaskDox</a>
+        {% if session.logged_in %}
+        <a href="/documents" class="app-link">Manage Dox</a>
+        <form action="{{ url_for('search') }}" method="POST" class="search-form">
+            <input type="text" class="search-input" placeholder="Search Dox" name="search">
+        </form>
+        {% endif %}
+    </div>
+    <nav>
+        {% if session.logged_in %}
+        <a href="/logout">Logout<i class="fas fa-sign-out-alt"></i></a>
+        {% else %}
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+        {% endif %}
+    </nav>
+</header>

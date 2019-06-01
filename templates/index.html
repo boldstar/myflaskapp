@@ -1,0 +1,24 @@
+{% extends 'default.html' %}
+
+{%  block body %}
+    {% include 'includes/_sidebar.html' %}
+    {% include 'includes/_toolbar.html' %}
+    <div class="app-container">
+        <form method=post enctype=multipart/form-data name="form" class="upload-form">
+            <input type="file" name="file">
+            <input type="submit" value="Submit" class="upload-btn">
+        </form>
+
+        <div class="files">
+            {% for file in files %}
+                <div class="file">
+                    <a class="file-btn" href="/delete/{{file}}">X</a>
+                    <embed src="/uploads/{{file}}" class="file-preview">
+                    <h4 class="file-name">
+                        <a href="/uploads/{{file}}">{{file}}</a>
+                    </h4>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

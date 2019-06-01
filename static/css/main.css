@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+    --main: #8400ff;
+    --gray: #d3d3d3;
+    --light: #f3f3f3;
+    --dark: #131313;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: var(--light);
+    color: var(--dark);
+    padding: 15px 50px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--main);
+    font-weight: bold;
+    align-self: center;
+}
+
+.app-link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.nav-left {
+    display: flex;
+}
+
+nav {
+    display: flex;
+    align-self: center;
+}
+
+nav a {
+    margin-left: 35px;
+    font-size: 1.25;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.app-container {
+    position: relative;
+    max-width: 1120px;
+    margin: auto;
+    margin-top: 75px;
+    padding-top: 20px;
+}
+
+.hero {
+    padding: 30px;
+    width: 90%;
+    margin: 100px auto;
+    background: var(--gray);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.300);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: var(--main);
+    margin-bottom: 5px;
+}
+
+.hero-caption {
+    font-size: 2rem;
+    color: var(--dark);
+    text-align: center;
+}
+
+.hero-btn {
+    background: var(--light);
+    border: none;
+    border-radius: 3px;
+    color: var(--main);
+    padding: 10px 30px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    box-shadow: 0 0 5px 0 rgba(0,0,0.5);
+}
+
+.files {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 90px;
+}
+
+.file {
+    height: 200px;
+    width: 225px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+    border-radius: 5px;
+    text-align: center;
+    background: var(--light);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.file-preview {
+    width: 225px;
+    height: 150px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-none !important;
+    -ms-overflow-style: none !important;
+}
+
+.file-preview::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none!important;
+}
+
+.file-name {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.file-name a {
+    color: var(--dark);
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 200px;
+    display: block;
+    overflow: hidden;
+}
+
+.file-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    color: var(--light);
+    text-decoration: none;
+    background: var(--main);
+    padding: 2px 5px;
+    border-radius: 5px;
+
+}
+
+.upload-form {
+    margin-bottom: 30px;
+    max-width: 800px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    padding: 10px;
+    width: 800px!important;
+}
+
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    height: calc(100vh -75px);
+    color: var(--dark);
+}
+
+.sidebar-btn {
+    background: var(--light);
+    color: var(--main);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 30px;
+    margin-left: 50px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.150);
+    cursor: pointer;
+    transition: background .3s;
+    outline: none;
+}
+
+.sidebar-btn:hover {
+    background: #d3d3d3;
+}
+
+.sidebar ul {
+    width: 250px;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.sidebar-item {
+    margin-bottom: 15px;
+    font-weight: bold;
+    list-style: none;
+    padding: 8px;
+    padding-left: 50px;
+    width: 175px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.sidebar-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 0 10px 10px 0;
+}
+
+.sidebar-item:first-of-type {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 0 10px 10px 0;
+}
+
+.icon {
+    margin-right: 10px;
+    color: var(--main);
+}
+
+.toolbar {
+    position: absolute;
+    top: 70px;
+    left: 250px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-bottom: 1px solid gray;
+    background: white;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.fa-plus {
+    margin-right: 10px;
+    color: var(--dark);
+}
+
+.search-input {
+    border-radius: 3px;
+    background: white;
+    height: 40px;
+    margin-left: 20px;
+    width: 600px;
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+
+.form {
+    width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.150);
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.form-btn {
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1.25rem;
+    padding: 10px;
+    background: var(--main);
+    color: var(--light);
+    font-weight: bold;
+}
+
+.page-header {
+    margin-bottom: 0;
+    text-align: center;
+    margin: 20px;
+}
+
+.flash-messages {
+    position: absolute!important;
+    top: 68px!important;
+    right: 50px!important;
+    list-style: none;
+    background: var(--light);
+    color: var(--main);
+    border: 1px solid var(--dark);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 0;
+    width: 375px;
+    animation: slide .3s ease, fade 10s ease-in;
+    opacity: 0;
+}
+
+.flash-messages li{
+    font-weight: bold;
+    color: var(--main);
+    padding: 10px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(100px)
+    }
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fa-sign-out-alt {
+    margin-left: 10px;
+    color: var(--main);
+}
